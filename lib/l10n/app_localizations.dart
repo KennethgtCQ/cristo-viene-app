@@ -541,6 +541,426 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Ocurrió un error. Intenta de nuevo'**
   String get errDesconocido;
+
+  /// No description provided for @holaNombre.
+  ///
+  /// In es, this message translates to:
+  /// **'¡Hola, {nombre}!'**
+  String holaNombre(String nombre);
+
+  /// No description provided for @esUnGustoTenerteAqui.
+  ///
+  /// In es, this message translates to:
+  /// **'Es un gusto tenerte aquí'**
+  String get esUnGustoTenerteAqui;
+
+  /// No description provided for @unaIglesiaUnaFamilia.
+  ///
+  /// In es, this message translates to:
+  /// **'Una iglesia, una sola familia'**
+  String get unaIglesiaUnaFamilia;
+
+  /// No description provided for @heroDescripcion.
+  ///
+  /// In es, this message translates to:
+  /// **'Conectando personas, compartiendo el evangelio y sirviendo a nuestra comunidad.'**
+  String get heroDescripcion;
+
+  /// No description provided for @accesoBiblia.
+  ///
+  /// In es, this message translates to:
+  /// **'Biblia'**
+  String get accesoBiblia;
+
+  /// No description provided for @accesoBoletin.
+  ///
+  /// In es, this message translates to:
+  /// **'Boletín'**
+  String get accesoBoletin;
+
+  /// No description provided for @accesoOfrendar.
+  ///
+  /// In es, this message translates to:
+  /// **'Ofrendar'**
+  String get accesoOfrendar;
+
+  /// No description provided for @accesoOraciones.
+  ///
+  /// In es, this message translates to:
+  /// **'Oraciones'**
+  String get accesoOraciones;
+
+  /// No description provided for @proximoEvento.
+  ///
+  /// In es, this message translates to:
+  /// **'Próximo evento'**
+  String get proximoEvento;
+
+  /// No description provided for @noticias.
+  ///
+  /// In es, this message translates to:
+  /// **'Noticias'**
+  String get noticias;
+
+  /// No description provided for @buscar.
+  ///
+  /// In es, this message translates to:
+  /// **'Buscar'**
+  String get buscar;
+
+  /// No description provided for @proximos.
+  ///
+  /// In es, this message translates to:
+  /// **'Próximos'**
+  String get proximos;
+
+  /// No description provided for @pasados.
+  ///
+  /// In es, this message translates to:
+  /// **'Pasados'**
+  String get pasados;
+
+  /// No description provided for @serie.
+  ///
+  /// In es, this message translates to:
+  /// **'Serie'**
+  String get serie;
+
+  /// No description provided for @minutos.
+  ///
+  /// In es, this message translates to:
+  /// **'{n} min'**
+  String minutos(int n);
+
+  /// No description provided for @categoriaDiscipulado.
+  ///
+  /// In es, this message translates to:
+  /// **'Discipulado'**
+  String get categoriaDiscipulado;
+
+  /// No description provided for @categoriaNuevasGeneraciones.
+  ///
+  /// In es, this message translates to:
+  /// **'Nuevas generaciones'**
+  String get categoriaNuevasGeneraciones;
+
+  /// No description provided for @sobreEsteMinisterio.
+  ///
+  /// In es, this message translates to:
+  /// **'Sobre este ministerio'**
+  String get sobreEsteMinisterio;
+
+  /// No description provided for @ministerioEdades.
+  ///
+  /// In es, this message translates to:
+  /// **'Edades'**
+  String get ministerioEdades;
+
+  /// No description provided for @ministerioReuniones.
+  ///
+  /// In es, this message translates to:
+  /// **'Reuniones'**
+  String get ministerioReuniones;
+
+  /// No description provided for @ministerioLugar.
+  ///
+  /// In es, this message translates to:
+  /// **'Lugar'**
+  String get ministerioLugar;
+
+  /// No description provided for @unirme.
+  ///
+  /// In es, this message translates to:
+  /// **'Unirme'**
+  String get unirme;
+
+  /// No description provided for @proximosEventos.
+  ///
+  /// In es, this message translates to:
+  /// **'Próximos eventos'**
+  String get proximosEventos;
+
+  /// No description provided for @loMasReciente.
+  ///
+  /// In es, this message translates to:
+  /// **'Lo más reciente'**
+  String get loMasReciente;
+
+  /// No description provided for @peticionesTitulo.
+  ///
+  /// In es, this message translates to:
+  /// **'Peticiones de oración'**
+  String get peticionesTitulo;
+
+  /// No description provided for @peticionesDescripcion.
+  ///
+  /// In es, this message translates to:
+  /// **'Únete en oración por las necesidades de nuestra comunidad. Dios escucha cada petición.'**
+  String get peticionesDescripcion;
+
+  /// No description provided for @agregarPeticion.
+  ///
+  /// In es, this message translates to:
+  /// **'+ Agregar petición'**
+  String get agregarPeticion;
+
+  /// No description provided for @misPeticionesTitulo.
+  ///
+  /// In es, this message translates to:
+  /// **'Mis peticiones de oración'**
+  String get misPeticionesTitulo;
+
+  /// No description provided for @misPeticionesDescripcion.
+  ///
+  /// In es, this message translates to:
+  /// **'Tus peticiones también importan. Dios te escucha.'**
+  String get misPeticionesDescripcion;
+
+  /// No description provided for @activas.
+  ///
+  /// In es, this message translates to:
+  /// **'Activas'**
+  String get activas;
+
+  /// No description provided for @inactivas.
+  ///
+  /// In es, this message translates to:
+  /// **'Inactivas'**
+  String get inactivas;
+
+  /// No description provided for @solicitudOracion.
+  ///
+  /// In es, this message translates to:
+  /// **'Solicitud de oración'**
+  String get solicitudOracion;
+
+  /// No description provided for @solicitudOracionDescripcion.
+  ///
+  /// In es, this message translates to:
+  /// **'¿Tienes una petición especial? Nos encantaría orar por ti'**
+  String get solicitudOracionDescripcion;
+
+  /// No description provided for @publicarAnonima.
+  ///
+  /// In es, this message translates to:
+  /// **'Publicar de forma anónima'**
+  String get publicarAnonima;
+
+  /// No description provided for @tuPeticion.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu petición de oración'**
+  String get tuPeticion;
+
+  /// No description provided for @anonimo.
+  ///
+  /// In es, this message translates to:
+  /// **'Anónimo'**
+  String get anonimo;
+
+  /// No description provided for @enviar.
+  ///
+  /// In es, this message translates to:
+  /// **'Enviar'**
+  String get enviar;
+
+  /// No description provided for @peticionEnviada.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu petición fue enviada.'**
+  String get peticionEnviada;
+
+  /// No description provided for @notificacionesTitulo.
+  ///
+  /// In es, this message translates to:
+  /// **'Notificaciones'**
+  String get notificacionesTitulo;
+
+  /// No description provided for @filtroTodas.
+  ///
+  /// In es, this message translates to:
+  /// **'Todas'**
+  String get filtroTodas;
+
+  /// No description provided for @filtroEventos.
+  ///
+  /// In es, this message translates to:
+  /// **'Eventos'**
+  String get filtroEventos;
+
+  /// No description provided for @filtroAnuncios.
+  ///
+  /// In es, this message translates to:
+  /// **'Anuncios'**
+  String get filtroAnuncios;
+
+  /// No description provided for @filtroMinisterios.
+  ///
+  /// In es, this message translates to:
+  /// **'Ministerios'**
+  String get filtroMinisterios;
+
+  /// No description provided for @ofrendasTitulo.
+  ///
+  /// In es, this message translates to:
+  /// **'Ofrendas'**
+  String get ofrendasTitulo;
+
+  /// No description provided for @ofrendasApoyar.
+  ///
+  /// In es, this message translates to:
+  /// **'¿Qué te gustaría apoyar?'**
+  String get ofrendasApoyar;
+
+  /// No description provided for @ofrendasApoyarDescripcion.
+  ///
+  /// In es, this message translates to:
+  /// **'Selecciona una iniciativa de la iglesia.'**
+  String get ofrendasApoyarDescripcion;
+
+  /// No description provided for @ofrendaBuenSamaritano.
+  ///
+  /// In es, this message translates to:
+  /// **'Buen Samaritano'**
+  String get ofrendaBuenSamaritano;
+
+  /// No description provided for @ofrendaBuenSamaritanoDesc.
+  ///
+  /// In es, this message translates to:
+  /// **'Apoyando a las familias que más lo necesitan.'**
+  String get ofrendaBuenSamaritanoDesc;
+
+  /// No description provided for @ofrendaCasaNueva.
+  ///
+  /// In es, this message translates to:
+  /// **'Casa Nueva'**
+  String get ofrendaCasaNueva;
+
+  /// No description provided for @ofrendaCasaNuevaDesc.
+  ///
+  /// In es, this message translates to:
+  /// **'Ayuda a construir nuestro nuevo templo.'**
+  String get ofrendaCasaNuevaDesc;
+
+  /// No description provided for @ofrendaMisiones.
+  ///
+  /// In es, this message translates to:
+  /// **'Misiones'**
+  String get ofrendaMisiones;
+
+  /// No description provided for @ofrendaMisionesDesc.
+  ///
+  /// In es, this message translates to:
+  /// **'Haz que el mensaje de redención llegue más allá de las fronteras.'**
+  String get ofrendaMisionesDesc;
+
+  /// No description provided for @ofrendaOtro.
+  ///
+  /// In es, this message translates to:
+  /// **'Otro'**
+  String get ofrendaOtro;
+
+  /// No description provided for @ofrendaOtroDesc.
+  ///
+  /// In es, this message translates to:
+  /// **'Colaboras con el mantenimiento del templo y/o cualquiera de las otras causas.'**
+  String get ofrendaOtroDesc;
+
+  /// No description provided for @banco.
+  ///
+  /// In es, this message translates to:
+  /// **'Banco'**
+  String get banco;
+
+  /// No description provided for @monto.
+  ///
+  /// In es, this message translates to:
+  /// **'Monto'**
+  String get monto;
+
+  /// No description provided for @otro.
+  ///
+  /// In es, this message translates to:
+  /// **'Otro'**
+  String get otro;
+
+  /// No description provided for @donarAhora.
+  ///
+  /// In es, this message translates to:
+  /// **'Donar ahora'**
+  String get donarAhora;
+
+  /// No description provided for @otrasFormasDeOfrendar.
+  ///
+  /// In es, this message translates to:
+  /// **'Otras formas de ofrendar'**
+  String get otrasFormasDeOfrendar;
+
+  /// No description provided for @transferencia.
+  ///
+  /// In es, this message translates to:
+  /// **'Transferencia'**
+  String get transferencia;
+
+  /// No description provided for @cuentaNumero.
+  ///
+  /// In es, this message translates to:
+  /// **'Cuenta'**
+  String get cuentaNumero;
+
+  /// No description provided for @cuentaCliente.
+  ///
+  /// In es, this message translates to:
+  /// **'Cuenta cliente'**
+  String get cuentaCliente;
+
+  /// No description provided for @cuentaIban.
+  ///
+  /// In es, this message translates to:
+  /// **'Cuenta IBAN'**
+  String get cuentaIban;
+
+  /// No description provided for @concepto.
+  ///
+  /// In es, this message translates to:
+  /// **'Concepto'**
+  String get concepto;
+
+  /// No description provided for @beneficiario.
+  ///
+  /// In es, this message translates to:
+  /// **'Nombre'**
+  String get beneficiario;
+
+  /// No description provided for @colones.
+  ///
+  /// In es, this message translates to:
+  /// **'Colones'**
+  String get colones;
+
+  /// No description provided for @dolares.
+  ///
+  /// In es, this message translates to:
+  /// **'Dólares'**
+  String get dolares;
+
+  /// No description provided for @cerrar.
+  ///
+  /// In es, this message translates to:
+  /// **'Cerrar'**
+  String get cerrar;
+
+  /// No description provided for @libros.
+  ///
+  /// In es, this message translates to:
+  /// **'Libros'**
+  String get libros;
+
+  /// No description provided for @sinContenido.
+  ///
+  /// In es, this message translates to:
+  /// **'Por ahora no hay contenido.'**
+  String get sinContenido;
 }
 
 class _AppLocalizationsDelegate

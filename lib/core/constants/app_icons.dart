@@ -15,4 +15,19 @@ abstract final class AppIcons {
   static const google = '$_base/google.svg';
   static const apple = '$_base/apple.svg';
   static const logo = 'assets/images/logo.svg';
+  static const campana = '$_base/campana.svg';
+  static const reproducir = '$_base/reproducir.svg';
+  static const corazon = '$_base/corazon.svg';
+  static const comentario = '$_base/comentario.svg';
+  static const manos = '$_base/manos.svg';
+  static const biblia = '$_base/biblia.svg';
+  static const boletin = '$_base/boletin.svg';
+  static const ofrendar = '$_base/ofrendar.svg';
+  static const oraciones = '$_base/oraciones.svg';
+  static const megafono = '$_base/megafono.svg';
+  static const calendario = '$_base/calendario.svg';
+  static const grupo = '$_base/grupo.svg';
+  static const buscar = '$_base/buscar.svg';
+  static const flechaDerecha = '$_base/flecha_derecha.svg';
+  static const check = '$_base/check.svg';
 }

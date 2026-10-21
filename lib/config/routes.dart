@@ -17,9 +17,21 @@ import '../ui/auth/views/otp_screen.dart';
 import '../ui/auth/views/recuperar_contrasena_screen.dart';
 import '../ui/auth/views/registro_screen.dart';
 import '../ui/auth/views/splash_screen.dart';
+import '../ui/biblia/views/biblia_screen.dart';
+import '../ui/boletin/views/boletin_screen.dart';
+import '../ui/boletin/views/publicacion_detalle_screen.dart';
 import '../ui/dev/views/galeria_componentes_screen.dart';
+import '../ui/eventos/views/eventos_screen.dart';
+import '../ui/inicio/views/inicio_screen.dart';
 import '../ui/legal/view_models/legal_view_model.dart';
 import '../ui/legal/views/legal_screen.dart';
+import '../ui/ministerios/views/ministerio_detalle_screen.dart';
+import '../ui/ministerios/views/ministerios_screen.dart';
+import '../ui/notificaciones/views/notificaciones_screen.dart';
+import '../ui/ofrendas/views/ofrendas_screen.dart';
+import '../ui/oraciones/views/mis_peticiones_screen.dart';
+import '../ui/oraciones/views/oraciones_screen.dart';
+import '../ui/predicas/views/predicas_screen.dart';
 
 /// Rutas sin sesión.
 const _publicas = {
@@ -45,8 +57,8 @@ const _soloSinSesion = {
   '/acceso-denegado',
 };
 
-/// Reglas de acceso (solo de experiencia de usuario). La seguridad real
-/// está en Firestore Rules y Cloud Functions, nunca en el cliente.
+/// Reglas de acceso (solo experiencia de usuario). La seguridad real está en
+/// Firestore Rules y Cloud Functions, nunca en el cliente.
 String? _redireccion(AuthViewModel auth, String ruta) {
   if (auth.inicializando) return ruta == '/splash' ? null : '/splash';
   if (kDebugMode && ruta == '/dev/componentes') return null;
@@ -69,13 +81,10 @@ String? _redireccion(AuthViewModel auth, String ruta) {
   }
 
   // ---- Web: solo administradores ----
-  if (kIsWeb) {
-    if (!usuario.esAdmin) return ruta == '/acceso-denegado' ? null : '/acceso-denegado';
-    return ruta.startsWith('/admin') ? null : '/admin';
+  if (kIsWeb && !usuario.esAdmin) {
+    return ruta == '/acceso-denegado' ? null : '/acceso-denegado';
   }
 
-  // ---- Móvil ----
-  if (ruta.startsWith('/admin')) return '/inicio'; // el panel admin es solo web
   if (_soloSinSesion.contains(ruta)) return '/inicio';
   return null;
 }
@@ -107,7 +116,7 @@ GoRouter crearRouter(AuthViewModel auth) => GoRouter(
         GoRoute(path: '/legal/terminos', builder: (_, __) => _legal(TipoLegal.terminos)),
         GoRoute(path: '/legal/privacidad', builder: (_, __) => _legal(TipoLegal.privacidad)),
 
-        // ---- Panel admin (solo web; por ahora marcador) ----
+        // ---- Panel admin (web; pendiente de construir) ----
         GoRoute(
           path: '/admin',
           builder: (context, _) => Scaffold(
@@ -115,17 +124,37 @@ GoRouter crearRouter(AuthViewModel auth) => GoRouter(
           ),
         ),
 
-        // ---- Pestañas principales (marcadores hasta la fase 3) ----
+        // ---- Pestañas principales (con barra inferior en móvil y riel en web) ----
         StatefulShellRoute.indexedStack(
           builder: (context, state, shell) => AppShell(navigationShell: shell),
           branches: [
-            _rama('/inicio', (l) => l.navInicio),
-            _rama('/eventos', (l) => l.navEventos),
-            _rama('/predicas', (l) => l.navPredicas),
-            _rama('/ministerios', (l) => l.navMinisterios),
-            _rama('/mas', (l) => l.navMas),
+            StatefulShellBranch(routes: [
+              GoRoute(path: '/inicio', builder: (_, __) => const InicioScreen()),
+            ]),
+            StatefulShellBranch(routes: [
+              GoRoute(path: '/eventos', builder: (_, __) => const EventosScreen()),
+            ]),
+            StatefulShellBranch(routes: [
+              GoRoute(path: '/predicas', builder: (_, __) => const PredicasScreen()),
+            ]),
+            StatefulShellBranch(routes: [
+              GoRoute(path: '/ministerios', builder: (_, __) => const MinisteriosScreen()),
+            ]),
+            StatefulShellBranch(routes: [
+              GoRoute(path: '/mas', builder: (context, __) => _marcador(context, (l) => l.navMas)),
+            ]),
           ],
         ),
+
+        // ---- Pantallas de detalle y secundarias (cubren la navegación) ----
+        GoRoute(path: '/ministerios/:id', builder: (_, s) => MinisterioDetalleScreen(id: s.pathParameters['id']!)),
+        GoRoute(path: '/boletin', builder: (_, __) => const BoletinScreen()),
+        GoRoute(path: '/boletin/:id', builder: (_, s) => PublicacionDetalleScreen(id: s.pathParameters['id']!)),
+        GoRoute(path: '/biblia', builder: (_, __) => const BibliaScreen()),
+        GoRoute(path: '/oraciones', builder: (_, __) => const OracionesScreen()),
+        GoRoute(path: '/oraciones/mias', builder: (_, __) => const MisPeticionesScreen()),
+        GoRoute(path: '/ofrendas', builder: (_, __) => const OfrendasScreen()),
+        GoRoute(path: '/notificaciones', builder: (_, __) => const NotificacionesScreen()),
 
         // Solo existe en debug.
         if (kDebugMode)
@@ -141,14 +170,5 @@ Widget _legal(TipoLegal tipo) => ChangeNotifierProvider(
       child: LegalScreen(tipo: tipo),
     );
 
-StatefulShellBranch _rama(String ruta, String Function(AppLocalizations) titulo) =>
-    StatefulShellBranch(
-      routes: [
-        GoRoute(
-          path: ruta,
-          builder: (context, state) => PantallaPendiente(
-            titulo: titulo(AppLocalizations.of(context)),
-          ),
-        ),
-      ],
-    );
+Widget _marcador(BuildContext context, String Function(AppLocalizations) titulo) =>
+    PantallaPendiente(titulo: titulo(AppLocalizations.of(context)));

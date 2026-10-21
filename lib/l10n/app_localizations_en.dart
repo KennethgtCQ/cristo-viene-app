@@ -243,4 +243,225 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get errDesconocido => 'Something went wrong. Try again';
+
+  @override
+  String holaNombre(String nombre) {
+    return 'Hi, $nombre!';
+  }
+
+  @override
+  String get esUnGustoTenerteAqui => 'We\'re glad to have you here';
+
+  @override
+  String get unaIglesiaUnaFamilia => 'One church, one family';
+
+  @override
+  String get heroDescripcion =>
+      'Connecting people, sharing the gospel and serving our community.';
+
+  @override
+  String get accesoBiblia => 'Bible';
+
+  @override
+  String get accesoBoletin => 'Bulletin';
+
+  @override
+  String get accesoOfrendar => 'Give';
+
+  @override
+  String get accesoOraciones => 'Prayers';
+
+  @override
+  String get proximoEvento => 'Next event';
+
+  @override
+  String get noticias => 'News';
+
+  @override
+  String get buscar => 'Search';
+
+  @override
+  String get proximos => 'Upcoming';
+
+  @override
+  String get pasados => 'Past';
+
+  @override
+  String get serie => 'Series';
+
+  @override
+  String minutos(int n) {
+    return '$n min';
+  }
+
+  @override
+  String get categoriaDiscipulado => 'Discipleship';
+
+  @override
+  String get categoriaNuevasGeneraciones => 'New generations';
+
+  @override
+  String get sobreEsteMinisterio => 'About this ministry';
+
+  @override
+  String get ministerioEdades => 'Ages';
+
+  @override
+  String get ministerioReuniones => 'Meetings';
+
+  @override
+  String get ministerioLugar => 'Place';
+
+  @override
+  String get unirme => 'Join';
+
+  @override
+  String get proximosEventos => 'Upcoming events';
+
+  @override
+  String get loMasReciente => 'Most recent';
+
+  @override
+  String get peticionesTitulo => 'Prayer requests';
+
+  @override
+  String get peticionesDescripcion =>
+      'Join in prayer for our community\'s needs. God hears every request.';
+
+  @override
+  String get agregarPeticion => '+ Add request';
+
+  @override
+  String get misPeticionesTitulo => 'My prayer requests';
+
+  @override
+  String get misPeticionesDescripcion =>
+      'Your requests matter too. God hears you.';
+
+  @override
+  String get activas => 'Active';
+
+  @override
+  String get inactivas => 'Inactive';
+
+  @override
+  String get solicitudOracion => 'Prayer request';
+
+  @override
+  String get solicitudOracionDescripcion =>
+      'Do you have a special request? We would love to pray for you.';
+
+  @override
+  String get publicarAnonima => 'Post anonymously';
+
+  @override
+  String get tuPeticion => 'Your prayer request';
+
+  @override
+  String get anonimo => 'Anonymous';
+
+  @override
+  String get enviar => 'Send';
+
+  @override
+  String get peticionEnviada => 'Your request was sent.';
+
+  @override
+  String get notificacionesTitulo => 'Notifications';
+
+  @override
+  String get filtroTodas => 'All';
+
+  @override
+  String get filtroEventos => 'Events';
+
+  @override
+  String get filtroAnuncios => 'Announcements';
+
+  @override
+  String get filtroMinisterios => 'Ministries';
+
+  @override
+  String get ofrendasTitulo => 'Giving';
+
+  @override
+  String get ofrendasApoyar => 'What would you like to support?';
+
+  @override
+  String get ofrendasApoyarDescripcion => 'Select a church initiative.';
+
+  @override
+  String get ofrendaBuenSamaritano => 'Good Samaritan';
+
+  @override
+  String get ofrendaBuenSamaritanoDesc =>
+      'Supporting the families who need it most.';
+
+  @override
+  String get ofrendaCasaNueva => 'New House';
+
+  @override
+  String get ofrendaCasaNuevaDesc => 'Help build our new temple.';
+
+  @override
+  String get ofrendaMisiones => 'Missions';
+
+  @override
+  String get ofrendaMisionesDesc =>
+      'Help the message of redemption reach beyond borders.';
+
+  @override
+  String get ofrendaOtro => 'Other';
+
+  @override
+  String get ofrendaOtroDesc =>
+      'Help maintain the temple and/or any other cause.';
+
+  @override
+  String get banco => 'Bank';
+
+  @override
+  String get monto => 'Amount';
+
+  @override
+  String get otro => 'Other';
+
+  @override
+  String get donarAhora => 'Donate now';
+
+  @override
+  String get otrasFormasDeOfrendar => 'Other ways to give';
+
+  @override
+  String get transferencia => 'Transfer';
+
+  @override
+  String get cuentaNumero => 'Account';
+
+  @override
+  String get cuentaCliente => 'Client account';
+
+  @override
+  String get cuentaIban => 'IBAN account';
+
+  @override
+  String get concepto => 'Concept';
+
+  @override
+  String get beneficiario => 'Name';
+
+  @override
+  String get colones => 'Colones';
+
+  @override
+  String get dolares => 'Dollars';
+
+  @override
+  String get cerrar => 'Close';
+
+  @override
+  String get libros => 'Books';
+
+  @override
+  String get sinContenido => 'There is no content yet.';
 }
